@@ -1,0 +1,23 @@
+{
+  "name": "keyzen-course",
+  "version": "1.0.0",
+  "description": "Keyzen课程商店 API - Cloudflare Workers",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [
+    "keyzen",
+    "typing",
+    "cloudflare-workers"
+  ],
+  "author": "pingfury",
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.1",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260103.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^3.114.16"
+  }
+}
