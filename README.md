@@ -97,21 +97,42 @@ pnpm deploy
 
 ## 添加新课程
 
-### 1. 创建课程内容文件
+### 使用 Claude Code Skill（推荐）
+
+告诉 Claude 你想要生成什么样的课程，例如：
+- "生成一个练习数字键的课程"
+- "生成一个 Python 基础语法练习课程"
+- "生成一个练习《静夜思》的课程"
+
+Claude 会自动：
+1. 生成符合格式的 `.ron` 课程文件
+2. 更新 `metadata.json`
+3. 更新 `src/index.ts` 导入配置
+4. 提示你部署
+
+### 手动创建课程
+
+#### 1. 创建课程内容文件
 
 在 `data/lessons/` 目录下创建新的 `.ron` 文件，例如 `1004.ron`：
 
 ```ron
-(
+Lesson(
     id: 1004,
-    title: "你的课程标题",
-    description: "课程描述",
+    lesson_type: Prose,
+    language: "zh-CN",
+    title: "数字键练习",
+    description: "练习键盘数字行，掌握数字输入",
     exercises: [
-        (
-            target: "练习文本",
-            hint: Some("提示信息"),
-        ),
+        Exercise(content: "123 456", hint: Some("数字练习")),
+        Exercise(content: "789 012", hint: None),
     ],
+    meta: LessonMeta(
+        difficulty: Beginner,
+        tags: ["基础", "数字键"],
+        estimated_time: (300, 0),
+        prerequisite_ids: [],
+    ),
 )
 ```
 
