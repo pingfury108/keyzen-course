@@ -1,39 +1,23 @@
-(
+Lesson(
     id: 1002,
+    lesson_type: Prose,
+    language: "zh-CN",
     title: "上排键练习 - QWERT YUIOP",
     description: "练习键盘上排按键，提升打字速度",
     exercises: [
-        (
-            target: "qwert yuiop",
-            hint: Some("练习上排键位"),
-        ),
-        (
-            target: "qqq www",
-            hint: Some("重复练习 q 和 w 键"),
-        ),
-        (
-            target: "eee rrr",
-            hint: Some("重复练习 e 和 r 键"),
-        ),
-        (
-            target: "ttt yyy",
-            hint: Some("重复练习 t 和 y 键"),
-        ),
-        (
-            target: "uuu iii",
-            hint: Some("重复练习 u 和 i 键"),
-        ),
-        (
-            target: "ooo ppp",
-            hint: Some("重复练习 o 和 p 键"),
-        ),
-        (
-            target: "qwert trewq",
-            hint: Some("左手上排组合"),
-        ),
-        (
-            target: "yuiop poiuy",
-            hint: Some("右手上排组合"),
-        ),
+        Exercise(content: "qwert yuiop", hint: Some("练习上排键位")),
+        Exercise(content: "qqq www", hint: Some("重复练习 q 和 w 键")),
+        Exercise(content: "eee rrr", hint: Some("重复练习 e 和 r 键")),
+        Exercise(content: "ttt yyy", hint: Some("重复练习 t 和 y 键")),
+        Exercise(content: "uuu iii", hint: Some("重复练习 u 和 i 键")),
+        Exercise(content: "ooo ppp", hint: Some("重复练习 o 和 p 键")),
+        Exercise(content: "qwert trewq", hint: Some("左手上排组合")),
+        Exercise(content: "yuiop poiuy", hint: Some("右手上排组合")),
     ],
+    meta: LessonMeta(
+        difficulty: Beginner,
+        tags: ["基础", "上排键"],
+        estimated_time: (300, 0),
+        prerequisite_ids: [1001],
+    ),
 )

@@ -2,15 +2,13 @@ name = "keyzen-course"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 
-# 开发环境配置
-[env.dev]
-name = "keyzen-course-dev"
+# 配置文件加载规则
+[[rules]]
+type = "Text"
+globs = ["**/*.ron"]
+fallthrough = true
 
-# 生产环境配置
-[env.production]
-name = "keyzen-course"
-
-# 如果需要自定义域名，取消注释并修改
-routes = [
-   { pattern = "keyzen.pingfury.top/api/*", zone_name = "pingfury.top" }
-]
+# 自定义域名配置（Wrangler v4+）
+[[routes]]
+pattern = "keyzen.pingfury.top"
+custom_domain = true

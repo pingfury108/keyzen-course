@@ -1,39 +1,23 @@
-(
+Lesson(
     id: 1003,
+    lesson_type: Prose,
+    language: "zh-CN",
     title: "下排键练习 - ZXCVBNM",
     description: "练习键盘下排按键，完成基础键位训练",
     exercises: [
-        (
-            target: "zxcv bnm",
-            hint: Some("练习下排键位"),
-        ),
-        (
-            target: "zzz xxx",
-            hint: Some("重复练习 z 和 x 键"),
-        ),
-        (
-            target: "ccc vvv",
-            hint: Some("重复练习 c 和 v 键"),
-        ),
-        (
-            target: "bbb nnn",
-            hint: Some("重复练习 b 和 n 键"),
-        ),
-        (
-            target: "mmm",
-            hint: Some("重复练习 m 键"),
-        ),
-        (
-            target: "zxcv vcxz",
-            hint: Some("左手下排组合"),
-        ),
-        (
-            target: "bnm mnb",
-            hint: Some("右手下排组合"),
-        ),
-        (
-            target: "zxcv bnm zxcv bnm",
-            hint: Some("双手下排协调"),
-        ),
+        Exercise(content: "zxcv bnm", hint: Some("练习下排键位")),
+        Exercise(content: "zzz xxx", hint: Some("重复练习 z 和 x 键")),
+        Exercise(content: "ccc vvv", hint: Some("重复练习 c 和 v 键")),
+        Exercise(content: "bbb nnn", hint: Some("重复练习 b 和 n 键")),
+        Exercise(content: "mmm", hint: Some("重复练习 m 键")),
+        Exercise(content: "zxcv vcxz", hint: Some("左手下排组合")),
+        Exercise(content: "bnm mnb", hint: Some("右手下排组合")),
+        Exercise(content: "zxcv bnm zxcv bnm", hint: Some("双手下排协调")),
     ],
+    meta: LessonMeta(
+        difficulty: Beginner,
+        tags: ["基础", "下排键"],
+        estimated_time: (300, 0),
+        prerequisite_ids: [1001, 1002],
+    ),
 )

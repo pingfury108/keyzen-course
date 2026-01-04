@@ -1,39 +1,23 @@
-(
+Lesson(
     id: 1001,
+    lesson_type: Prose,
+    language: "zh-CN",
     title: "基础练习 - ASDF JKL;",
     description: "练习键盘中排基础按键，掌握正确的手指位置",
     exercises: [
-        (
-            target: "asdf jkl;",
-            hint: Some("练习基础键位，左手 asdf，右手 jkl;"),
-        ),
-        (
-            target: "fff jjj",
-            hint: Some("重复练习 f 和 j 键"),
-        ),
-        (
-            target: "ddd kkk",
-            hint: Some("重复练习 d 和 k 键"),
-        ),
-        (
-            target: "sss lll",
-            hint: Some("重复练习 s 和 l 键"),
-        ),
-        (
-            target: "aaa ;;;",
-            hint: Some("重复练习 a 和 ; 键"),
-        ),
-        (
-            target: "asdf fdsa",
-            hint: Some("左手组合练习"),
-        ),
-        (
-            target: "jkl; ;lkj",
-            hint: Some("右手组合练习"),
-        ),
-        (
-            target: "asdf jkl; asdf jkl;",
-            hint: Some("双手协调练习"),
-        ),
+        Exercise(content: "asdf jkl;", hint: Some("练习基础键位，左手 asdf，右手 jkl;")),
+        Exercise(content: "fff jjj", hint: Some("重复练习 f 和 j 键")),
+        Exercise(content: "ddd kkk", hint: Some("重复练习 d 和 k 键")),
+        Exercise(content: "sss lll", hint: Some("重复练习 s 和 l 键")),
+        Exercise(content: "aaa ;;;", hint: Some("重复练习 a 和 ; 键")),
+        Exercise(content: "asdf fdsa", hint: Some("左手组合练习")),
+        Exercise(content: "jkl; ;lkj", hint: Some("右手组合练习")),
+        Exercise(content: "asdf jkl; asdf jkl;", hint: Some("双手协调练习")),
     ],
+    meta: LessonMeta(
+        difficulty: Beginner,
+        tags: ["基础", "中排键"],
+        estimated_time: (300, 0),
+        prerequisite_ids: [],
+    ),
 )
